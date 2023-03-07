@@ -16,7 +16,7 @@
       <q-card-section class="col">
         <div class="text-overline">Species: {{ character.species }}</div>
         <h2 class="text-h2 q-mt-sm q-mb-xs">{{ character.name }}</h2>
-        <p class="text-h2 q-mt-xs"> {{ getEmoji(character.gender) }}</p>
+        <p class="text-h2 q-mt-xs">{{ getEmoji(character.gender) }}</p>
       </q-card-section>
       <q-card-section class="col-5 flex flex-center">
         <q-img class="rounded-borders" :src="character.image" />
@@ -30,7 +30,6 @@
       <span class="q-ml-sm"> {{ character.origin?.name }}</span>
     </q-card-actions>
   </q-card>
-
 
   <h2 class="text-h5 q-mt-lg q-mb-md" v-if="!loading">Episodes</h2>
 
@@ -54,6 +53,10 @@ export default {
     const route = useRoute()
     const id = computed(() => route.params.id)
     const { result, loading } = getCharacter(id)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
 
     const character = computed(() => {
       return result?.value?.character ?? {}

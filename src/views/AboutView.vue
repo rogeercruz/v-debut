@@ -14,9 +14,9 @@
   >
     <q-card-section horizontal space class="row items-center">
       <q-card-section class="col">
-        <div class="text-overline">Species: {{ character.species }}</div>
+        <div class="text-overline">Species: {{ character.species }} <span class="text-h5 ">{{ getEmoji(character.gender) }}</span></div>
         <h2 class="text-h2 q-mt-sm q-mb-xs">{{ character.name }}</h2>
-        <span class="text-h2 q-mt-xs">{{ getEmoji(character.gender) }}</span>
+        
       </q-card-section>
       <q-card-section class="col-5 flex flex-center">
         <q-img class="rounded-borders" :src="character.image" />

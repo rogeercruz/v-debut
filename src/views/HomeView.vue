@@ -8,10 +8,9 @@
 
     <div class="flex justify-center" v-if="characters.length === 0 && !loading">
       <img
-        width="80%"
+        width="200"
         src="https://media.cdn.adultswim.com/uploads/20210914/219141616186-1910281358343-RAM.jpg"
       />
-      <p class="q-pa-lg">No results found!</p>
     </div>
 
     <div class="min-h-screen custom-container">

@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="$dark">
+  <q-layout view="hHh lpR fFf" class="$dark">
     <div class="flex flex-center q-pa-md">
       <img
         width="350"

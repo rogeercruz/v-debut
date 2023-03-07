@@ -88,7 +88,7 @@ export default {
         })
         setTimeout(() => {
           body.classList.remove('scroll-to-top')
-        }, 800) // adjust the delay to match the animation duration
+        }, 800) 
       },
     )
 
